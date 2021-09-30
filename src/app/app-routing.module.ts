@@ -19,6 +19,11 @@ const routes: Routes = [
     path: 'recupass',
     loadChildren: () => import('./recupass/recupass.module').then( m => m.RecupassPageModule)
   },
+  {
+    path: 'codrecu',
+    loadChildren: () => import('./codrecu/codrecu.module').then( m => m.CodrecuPageModule)
+  },
+
 
 ];
 
