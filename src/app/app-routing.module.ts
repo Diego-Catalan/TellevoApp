@@ -11,7 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./Inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'recupass',
+    loadChildren: () => import('./recupass/recupass.module').then( m => m.RecupassPageModule)
+  },
+
 ];
+
+
 
 @NgModule({
   imports: [

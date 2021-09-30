@@ -1,0 +1,33 @@
+<ion-header>
+
+      <ion-toolbar>
+        <ion-title>Recupera tu contraseña</ion-title>
+      </ion-toolbar>
+
+</ion-header>
+
+<ion-content >
+  <img src="https://signodeinterrogacion.info/wp-content/uploads/2020/06/3sinog.jpg"/>
+  <ion-item >
+    <ion-label class="ion-text-center" position="floating">Usuario</ion-label>
+    <ion-input [(ngModel)]="email" type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label  class="ion-text-center" position="floating">Nueva Contraseña</ion-label>
+    <ion-input [(ngModel)]="password" type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label  class="ion-text-center" position="floating">Confirmar Contraseña</ion-label>
+    <ion-input  type="text" required></ion-input>
+  </ion-item>
+
+  <ion-button onclick="MuestraMensajeCarga();" [routerLink]="['/inicio']" expand="block" type="submit"  color="light" >
+    Confirmar
+  </ion-button>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-content>
+
