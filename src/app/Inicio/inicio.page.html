@@ -1,21 +1,34 @@
+
 <ion-header>
-    <ion-buttons>
-      <ion-button>
-        <ion-icon name="person"></ion-icon>
-      </ion-button>
-      <ion-toolbar>
-        <ion-title>Bienvenido</ion-title>
-      </ion-toolbar>
-    </ion-buttons>
+
+  <ion-toolbar>
+    <ion-title>Edita tu usuario</ion-title>
+  </ion-toolbar>
+
 </ion-header>
 
-
-<ion-content>
-  <img src="https://www.sebandainsurance.com/blog/wp-content/uploads/2020/11/01-funcionamiento-seguro-autos.jpg"/>
-  <ion-text type="centrar">Hola "Pepe" </ion-text>
-  <ion-toolbar>
-    <ion-title></ion-title>
-  </ion-toolbar>
-  <ion-button expand="block" type="submit"  color="light" >Busca tu transporte</ion-button>
-
+<ion-content >
+<img src="https://signodeinterrogacion.info/wp-content/uploads/2020/06/3sinog.jpg"/>
+<ion-item >
+<ion-label position="floating">Id</ion-label>
+<ion-input [(ngModel)]='idUsuario' type="text" placeholder='Usuario'></ion-input>
+</ion-item>
+<ion-item >
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input [(ngModel)]='nombreUsuario' type="text" placeholder='Usuario'></ion-input>
+</ion-item>
+<ion-item >
+  <ion-label position="floating">Email</ion-label>
+  <ion-input [(ngModel)]='emailUsuario'type="text"  placeholder='Usuario'></ion-input>
+</ion-item>
+<ion-item >
+  <ion-label position="floating">Contraseña</ion-label>
+  <ion-input [(ngModel)]='contraUsuario' type="text"  placeholder='Usuario'></ion-input>
+</ion-item>
+<ion-button onclick="MuestraMensajeCarga();" (click)='actuaUsuario()' expand="block" type="submit"  color="primary" >Update usuario</ion-button>
+<ion-button onclick="MuestraMensajeCarga();" (click)='deleteUsuario()' expand="block" type="submit"  color="danger" >Eliminar usuario</ion-button>
+<ion-toolbar>
+<ion-title></ion-title>
+</ion-toolbar>
 </ion-content>
+

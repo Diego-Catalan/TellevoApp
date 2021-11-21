@@ -7,17 +7,23 @@
 <ion-content >
   <img src="https://www.autosaltiro.cl/public/img/sliders/gestion-documental.png"/>
   <ion-item >
-    <ion-label class="ion-text-center" position="floating">Usuario</ion-label>
-    <ion-input [(ngModel)]="email" type="text" required></ion-input>
+    <ion-input [(ngModel)]='usuario' placeholder='Usuario'></ion-input>
   </ion-item>
-
   <ion-item >
-    <ion-label  class="ion-text-center" position="floating">Contraseña</ion-label>
-    <ion-input [(ngModel)]="password" type="text" required></ion-input>
+    <ion-input placeholder='Nombre'></ion-input>
   </ion-item>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>nombre:{{nombreUsuario}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>Email:{{emailUsuario}}</ion-card-content>
+  </ion-card>
 
-  <ion-button [routerLink]="['/inicio']" expand="block" type="submit"  color="light" >
+  <ion-button (click)='buscarUsuario()' expand="block" type="submit"  color="light" >
     Iniciar sesion
+  </ion-button>
+  <ion-button [routerLink]="['/inicio']"  expand="block" type="submit"  color="primary" >
+    Inicio
   </ion-button>
   <ion-toolbar>
     <ion-title></ion-title>
@@ -26,9 +32,9 @@
     <ion-button expand="block" [routerLink]="['/recupass']">
       <ion-icon color="light" ></ion-icon>
       <ion-icon color="light" ></ion-icon>
-      <ion-icon color="warning" name="warning"></ion-icon>
+      <ion-icon color="light" name="light"></ion-icon>
       <ion-icon color="light"></ion-icon>
-        <ion-text>Olvidaste tu Contraseña?</ion-text>
+        <ion-text>Crea tu usuario</ion-text>
 
     </ion-button>
 

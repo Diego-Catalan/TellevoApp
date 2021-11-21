@@ -1,33 +1,28 @@
 <ion-header>
-
-      <ion-toolbar>
-        <ion-title>Recupera tu contraseña</ion-title>
-      </ion-toolbar>
-
+  <ion-buttons>
+    <ion-button [routerLink]="['/inicio']">
+      <ion-icon color="light" name="person" ></ion-icon>
+    </ion-button>
+    <ion-toolbar>
+      <ion-title>Crea tu usuario</ion-title>
+    </ion-toolbar>
+  </ion-buttons>
 </ion-header>
 
-<ion-content >
-  <img src="https://signodeinterrogacion.info/wp-content/uploads/2020/06/3sinog.jpg"/>
-  <ion-item >
-    <ion-label class="ion-text-center" position="floating">Usuario</ion-label>
-    <ion-input [(ngModel)]="email" type="text" required></ion-input>
-  </ion-item>
 
-  <ion-item >
-    <ion-label  class="ion-text-center" position="floating">Nueva Contraseña</ion-label>
-    <ion-input [(ngModel)]="password" type="text" required></ion-input>
+<ion-content>
+<img src="https://www.sebandainsurance.com/blog/wp-content/uploads/2020/11/01-funcionamiento-seguro-autos.jpg"/>
+<ion-item >
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]='nombreUsuario' type="text" placeholder='Usuario'></ion-input>
   </ion-item>
-
   <ion-item >
-    <ion-label  class="ion-text-center" position="floating">Confirmar Contraseña</ion-label>
-    <ion-input  type="text" required></ion-input>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]='emailUsuario'type="text"  placeholder='Usuario'></ion-input>
   </ion-item>
-
-  <ion-button onclick="MuestraMensajeCarga();" [routerLink]="['/codrecu']" expand="block" type="submit"  color="light" >
-    Confirmar
-  </ion-button>
-  <ion-toolbar>
-    <ion-title></ion-title>
-  </ion-toolbar>
+  <ion-item >
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input [(ngModel)]='contraUsuario' type="text"  placeholder='Usuario'></ion-input>
+  </ion-item>
+<ion-button onclick="MuestraMensajeCarga();" (click)='createUsuario()' expand="block" type="submit"  color="primary" >Crear usuario</ion-button>
 </ion-content>
-
