@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/7e29cbd0-3986-4ae2-b8c1-f29ce83eeefd/resourceGroups/bertechcrm_group/providers/Microsoft.Web/sites/bertechcrm",
+    "appService.deploySubpath": "Berte\\dist"
+}
